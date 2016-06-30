@@ -1,0 +1,228 @@
+<div id="content_jeux"class="contener" style="margin-left:250px;width:475px;height:375px;border:5px solid #99c99c">
+    
+<h1 class="h1" id="debut">croix ou rond</h1>
+
+
+
+
+
+<table class="table_morpion"id="table">
+    <tr>
+        <td class="td">
+        </td>
+        <td
+        class="td">
+        </td>
+        <td class="td">
+        </td>
+    </tr>
+    <tr>
+        <td class="td">
+        </td>
+        <td class="td">
+        </td>
+        <td class="td">
+        </td>
+    </tr>
+    <tr>
+        <td class="td">
+        </td>
+        <td class="td">
+        </td>
+        <td class="td">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3"><div id="r_x"><p class="p">nouvelle partie</p></div></td>
+
+    </tr>
+</table>
+
+
+<div class="score">
+    <div class="croix">
+<h1 class="l">croix</h1>
+<h2 id="c">0</h2>
+</div>
+<div class="rond">
+<h1 class="o">rond</h1>
+<h2 id="r">0</h2>
+</div>
+</div>
+
+<script>
+
+
+     
+    var tour = 0;
+function rond()
+{
+        if(this.innerHTML == "x" || this.innerHTML == "o")
+        {
+            alert('');
+        }
+        else if(tour % 2 == 0)
+        {
+            tour++;
+            this.innerHTML = "o";
+            this.style.color="white";
+            
+        }
+        else 
+        {
+            tour++;
+            this.innerHTML = "x";
+            this.style.color="white";
+            
+        }
+        
+
+};
+     
+
+
+
+    var tour = 0;
+function croix()
+{
+        if(this.innerHTML == "x" || this.innerHTML == "o")
+        {
+
+            alert('');
+        }
+        else if(tour % 2 == 0)
+        {
+            tour++;
+            this.innerHTML = "x";
+            this.style.color="white";
+            
+        }
+        else
+        {
+            tour++;
+            this.innerHTML = "o";
+            this.style.color="white";
+            
+        }
+    
+       
+};
+
+            
+
+
+function gagne(){
+
+         var td = document.querySelectorAll('.td');
+         var deb =document.getElementById('debut');
+         var table =document.getElementById('table');
+         for(var i = 0 ; i < td.length ; i ++ )
+         {
+
+
+            if((td[0].innerHTML=="x" && td[1].innerHTML=="x" && td[2].innerHTML=="x")|| (td[3].innerHTML=="x" && td[4].innerHTML=="x" && td[5].innerHTML=="x")||(td[6].innerHTML=="x" && td[7].innerHTML=="x" && td[8].innerHTML=="x")||(td[0].innerHTML=="x" && td[4].innerHTML=="x" && td[8].innerHTML=="x")||(td[2].innerHTML=="x" && td[4].innerHTML=="x" && td[6].innerHTML=="x")||(td[0].innerHTML=="x" && td[3].innerHTML=="x" && td[6].innerHTML=="x")||(td[1].innerHTML=="x" && td[4].innerHTML=="x" && td[7].innerHTML=="x")||(td[2].innerHTML=="x" && td[5].innerHTML=="x" && td[8].innerHTML=="x"))
+            {
+                 
+
+                alert('croix gagne');
+                     
+                var c = document.getElementById('c');
+                c.innerHTML = parseInt(c.innerHTML)+ 1;
+                deb.innerHTML="rejouer" ;
+                table.style.border="2px solid lime";
+                    tour = 0 ;
+                
+            for(var i = 0 ; i < td.length ; i ++ )
+            {
+                td[i].innerHTML=" ";
+            }
+              return false;
+            }
+            
+
+            else if ((td[0].innerHTML=="o" && td[1].innerHTML=="o" && td[2].innerHTML=="o")|| (td[3].innerHTML=="o" && td[4].innerHTML=="o" && td[5].innerHTML=="o")||(td[6].innerHTML=="o" && td[7].innerHTML=="o" && td[8].innerHTML=="o")||(td[0].innerHTML=="o" && td[4].innerHTML=="o" && td[8].innerHTML=="o")||(td[2].innerHTML=="o" && td[4].innerHTML=="o" && td[6].innerHTML=="o")||(td[0].innerHTML=="o" && td[3].innerHTML=="o" && td[6].innerHTML=="o")||(td[1].innerHTML=="o" && td[4].innerHTML=="o" && td[7].innerHTML=="o")||(td[2].innerHTML=="o" && td[5].innerHTML=="o" && td[8].innerHTML=="o"))
+
+            {
+                 
+                 
+
+                alert('rond gagne');
+                     
+                var r = document.getElementById('r');
+                r.innerHTML = parseInt(r.innerHTML)+1;
+                deb.innerHTML="rejouer" ;
+                table.style.border="2px solid orange";
+                    tour = 0 ;
+
+                   
+                   
+            for(var i = 0 ; i < td.length ; i ++ )
+            {
+                td[i].innerHTML=" ";
+            }
+              return false ;
+            }
+
+            else if((td[0].innerHTML=="x"|| td[0].innerHTML=="o")&&(td[1].innerHTML=="x"|| td[1].innerHTML=="o")&&(td[2].innerHTML=="x"|| td[2].innerHTML=="o")&&(td[3].innerHTML=="x"|| td[3].innerHTML=="o")&&(td[4].innerHTML=="x"|| td[4].innerHTML=="o")&&(td[5].innerHTML=="x"|| td[5].innerHTML=="o")&&(td[6].innerHTML=="x"|| td[6].innerHTML=="o")&&(td[7].innerHTML="x"|| td[7].innerHTML=="o")&&(td[8].innerHTML=="x"|| td[8].innerHTML=="o"))
+
+            {
+
+                    alert('egalitée');
+                    deb.innerHTML="rejouer" ;
+            for(var i = 0 ; i < td.length ; i ++ )
+            {
+                td[i].innerHTML=" ";
+                     tour = 0 ;
+            }
+              
+
+            }
+            
+             return false ;
+         }
+
+
+    };
+
+
+
+
+
+function debut()
+{
+        var deb =document.getElementById('debut');
+
+        
+        var un = Math.floor(Math.random() * 2);
+
+        var td = document.querySelectorAll('.td');
+
+        var deb =document.getElementById('debut');
+
+        for(var i = 0 ; i < td.length ; i ++ )
+        {
+
+        if(un == 1)
+        {    
+            deb.innerHTML = "croix";
+            td[i].onclick = croix;
+            r.innerHTML = "0";
+            c.innerHTML = "0";
+        }
+        else
+        {
+            deb.innerHTML = "rond";
+            td[i].onclick = rond ;
+            c.innerHTML = "0";
+            r.innerHTML = "0";
+        }
+        }
+};
+
+
+document.getElementById('content_jeux').onclick = gagne ;
+
+document.getElementById('r_x').onclick = debut;
+
+</script>
+

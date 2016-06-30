@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>titre</title>
+        <link type="text/css" rel="stylesheet" href="public/style/site.css"/>
+
+        <link rel="stylesheet" media="screen and (max-width: 500px)" href="red.css" /> 
+
+        <link rel="stylesheet" href="public/style/owl.carousel.css" />
+
+    <head>
+
+    <body>
+        
+
+    <?php 
+
+    require('apps/header.php');
+    require('apps/content.php');
+    require('apps/footer.php');
+
+
+    ?>
+
+    
+
+   
+    </body>
+
+</html>

@@ -1,0 +1,174 @@
+
+
+<div class="container_template">
+		<div class="head">
+		    
+		    <ul class="liens">
+		       <li class="li" ><a class="a_head" href="#">Concept</a>
+		       </li>
+		       <li class="li"><a class="a_head" href="#">Product</a>
+		       </li>
+		       <li class="li" ><a class="a_head" href="#">Price</a>
+		       </li>
+		       <li class="li" ><a class="a_head" href="#">Contact</a>
+		       </li>
+                    </ul>
+		</div>
+            <div class="owl-carousel">
+        	   
+        		<div class="item_min"><img class="ite" src="<?= $result->getImage1() ?>" alt="moto" /></div>
+                <div class="item_min"><img class="ite" src="<?= $result->getImage2() ?>" alt="moto" /></div>
+
+                <div class="item_min"><img class="ite" src="<?= $result->getImage3() ?>" alt="moto" /></div>
+        	    
+            </div>
+            <p id="p"><?= $result->getAnnonce() ?></p> 
+            <hr class="hr"> 
+
+ 
+        <article class="quatres_motos">
+              
+            <section class="section">
+                <img class="moto_section" src="<?= $result->getPhotoProd1() ?>" alt="moto1" />
+                <p class="dinosore"><?= $result->getNomProd1() ?></p>
+                <hr>
+                <p><?= $result->getDescProd1()?> </p>
+             </section>
+
+                         
+            <section class="section">
+                <img class="moto_section" src="<?= $result->getPhotoProd1() ?>" alt="moto1" />
+                <p class="dinosore"><?= $result->getNomProd2() ?></p>
+                <hr>
+                <p><?= $result->getDescProd1()?> </p>
+             </section>
+
+                         
+            <section class="section">
+                <img class="moto_section" src="<?= $result->getPhotoProd1() ?>" alt="moto1" />
+                <p class="dinosore"><?= $result->getNomProd3() ?></p>
+                <hr>
+                <p><?= $result->getDescProd1()?> </p>
+             </section>
+
+                         
+            <section class="section">
+                <img class="moto_section" src="<?= $result->getPhotoProd1() ?>" alt="moto1" />
+                <p class="dinosore"><?= $result->getNomProd4() ?></p>
+                <hr>
+                <p><?= $result->getDescProd1()?> </p>
+             </section>
+                
+
+
+
+
+                
+
+
+            
+            </article>
+
+
+
+            <p id="p">Pour nous connaitre plus en detail</p>
+                <hr class="hr"> 
+
+
+            <article class="dernier_a">
+                
+            <section class="section_fin">
+        <p id="p" ><?= $result->getMessagePerso() ?></p>
+                
+
+
+            </section>
+            <section class="section_fin">
+            <figure class="figure2">
+                <img class="img_fin" src="<?= $result->getImageFin() ?>" alt="moto2" />
+            </figure>
+            </section>
+            </article>
+
+
+
+
+            <footer>
+                <p>paragraphe</p>
+                <p>texte texte texte texte texte texte texte texte texte texte texte texte texte</p>
+                <p>texte texte texte texte texte texte texte texte texte texte texte texte texte</p>
+               
+                <p>2015-3WA-Exercice 7:Red Wolf</p>
+
+            </footer>
+
+
+    </div>
+
+
+
+
+
+<div style="font-size:13px;display:inline-block;width:50%" > 
+
+   
+
+
+
+        <table class="table_temp"><p style="background-color:lime"><?php
+             echo $error;
+    ?></p>
+
+            <form method="POST">
+                <tr>
+                    <td>image 1</td><td><input style="width:55px;" type="text" name="image1"/></td>
+                    <td>image 2</td><td><input style="width:55px;" type="text" name="image2"/></td>
+                    <td>image 3</td><td><input style="width:55px;" type="text" name="image3"/></td>
+                </tr>
+                <tr>
+                    <td>votre annonce</td><td colspan="3"><input type="text" name="annonce"/></td>
+                </tr>
+                <tr>
+                    <td>foto produit</td><td>foto produit</td><td>foto produit</td><td>foto produit</td>
+                </tr>
+                <tr>
+                    <td><input style="width:55px;" type="text" name="photo_prod_1"/></td><td><input style="width:55px;" type="text" name="photo_prod_2"/></td><td><input style="width:55px;" type="text" name="photo_prod_3"/></td><td><input style="width:55px;" type="text" name="photo_prod_4"/></td>
+                </tr>
+                <tr>
+                    <td>nomproduit</td><td>nom produit</td><td>nom produit</td><td>nom produit</td>
+                </tr>
+                <tr>
+                    <td><input style="width:55px;" type="text" name="nom_prod_1"/></td><td><input style="width:55px;" type="text" name="nom_prod_2"/></td><td><input style="width:55px;" type="text" name="nom_prod_3"/></td><td><input style="width:55px;" type="text" name="nom_prod_4"/></td>
+                </tr>
+                 <tr>
+                    <td>description roduit</td><td>description produit</td><td>description produit</td><td>description produit</td>
+                </tr>
+                <tr>
+                    <td><textarea style="width:55px;" type="text" name="desc_prod_1"></textarea></td><td><textarea style="width:55px;" type="text" name="desc_prod_2"></textarea></td><td><textarea  style="width:55px;" type="text" name="desc_prod_3"></textarea></td><td><textarea style="width:55px;" type="text" name="desc_prod_4"></textarea></td>
+                </tr>
+                <tr>
+                    <td>message perso</td><td><textarea style="width:55px;" name="message_perso"></textarea></td>
+                    <td>photo de fin</td><td><input style="width:55px;" type="text" name="image_fin"/></td>
+                </tr>
+                <tr>
+                    <td></td><td><input type="submit" name="submit"</td>
+                </tr>
+</form> 
+        </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="public/js/owl.carousel.min.js"></script>
+		<script>$(document).ready(function(){
+		var options=
+		{
+			"items":1,
+			"dots":true,
+			"autoplay":true,
+			"loop":true,
+		}
+  	$(".owl-carousel").owlCarousel(options);});
+
+</script>
+    
+

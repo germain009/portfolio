@@ -1,0 +1,49 @@
+<h1 class="h1_temp2">template 2</h1>
+<a href="template">template</a><a href="template3">template3</a>
+
+<div class="container_temp2">
+		<h1 class="h1_temp2">Arènes de Lutèce</h1>
+		<br>
+		<div class="sommaire">
+			<h2>Sommaire</h2>
+			<ol>
+				<li>Description</li>
+				<li>Historique</li>
+				<li>Les fouilles de Vacquer et Capitan</li>
+				<li>Acces</li>
+				<li>Notes et références</li>
+				<li>Annexes</li>
+			</ol>
+		</div>
+		<br>
+		<div class="description">
+			<h2>Description</h2>
+			
+			<p>Les arènes de Lutèce, construites au ier siècle, sont un amphithéâtre gallo-romain situé à Paris. Il s'agit d'un complexe hybride, de type « amphithéâtre à scène » ou encore « amphithéâtre-théâtre », comportant à la fois une scène pour les représentations théâtrales et une arène pour les combats de gladiateurs et autres jeux de l'amphithéâtre.
+            </p>
+        </div>
+        <br>
+
+        
+
+        <div class="img">
+        	<img class="img_temp2" src="lutece_1.jpg" alt="lutece" />
+        </div> 
+
+        <div class="historique">
+        	<h3>Historique</h3>
+        	<p>
+            Il est probable que les arènes, construites au ier siècle, restèrent en activité jusqu'à la première destruction de Lutèce, à la fin du iiie siècle. Toutefois, Chilpéric fit réparer cet amphithéâtre en 577 ap. J.-C. et y fit donner des spectacles3.
+
+            Le plus ancien texte faisant référence à ces arènes est dû au moine anglais Alexandre Neckham (1157-1217) qui décrit dans un poème latin ce qu'il a vu à Paris vers 11804. Il cite l'amphithéâtre romain. Un acte de 1284 rapporté par l'Université Du Boulay parle d'un lieu-dit Les Arènes devant Saint-Victor5. Adrien de Valois publie un texte en 1675 qui mentionne l'amphithéâtre[réf. nécessaire]. Cependant, les arènes sont alors ensevelies et leur emplacement exact est alors ignoré. Le site aura été peu à peu effacé, en particulier par les terres de remblai lors du creusement des fossés de l'enceinte de Philippe-Auguste au XIVe siècle.
+            </P>
+        </div>
+        
+
+        <div class="img">
+        	<img class="img_temp2" src="lutece_2.jpg" alt="lutece" />
+        </div> 
+
+    </div>
+
+

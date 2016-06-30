@@ -1,0 +1,10 @@
+<div style="min-height:525px;background-color:#FEFEE2">
+
+<?php
+
+require('apps/'.$page.'.php');
+
+?>
+
+
+</div>

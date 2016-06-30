@@ -1,0 +1,162 @@
+
+
+
+
+
+
+
+
+
+
+
+<div class="test">
+<div class="container_min">
+		<div class="head">
+		    
+		    <ul class="liens">
+		       <li class="li" ><a class="a_head" href="#">Concept</a>
+		       </li>
+		       <li class="li"><a class="a_head" href="#">Product</a>
+		       </li>
+		       <li class="li" ><a class="a_head" href="#">Price</a>
+		       </li>
+		       <li class="li" ><a class="a_head" href="#">Contact</a>
+		       </li>
+                    </ul>
+		</div>
+            <div class="owl-carousel">
+        	   
+        		<div class="item_min"><img class="ite" src="<?= $result->getImage1() ?>" alt="moto" /></div>
+                <div class="item_min"><img class="ite" src="<?= $result->getImage2() ?>" alt="moto" /></div>
+
+                <div class="item_min"><img class="ite" src="<?= $result->getImage3() ?>" alt="moto" /></div>
+        	    
+            </div>
+            <p id="p"><?= $result->getAnnonce() ?></p> 
+            <hr class="hr"> 
+
+ 
+        <article class="quatres_motos">
+              
+            <section class="section">
+                <img class="moto_section" src="<?= $result->getPhotoProd1() ?>" alt="moto1" />
+                <p class="dinosore"><?= $result->getNomProd1() ?></p>
+                <hr>
+                <p><?= $result->getDescProd1()?> </p>
+             </section>
+
+                         
+            <section class="section">
+                <img class="moto_section" src="<?= $result->getPhotoProd1() ?>" alt="moto1" />
+                <p class="dinosore"><?= $result->getNomProd2() ?></p>
+                <hr>
+                <p><?= $result->getDescProd1()?> </p>
+             </section>
+
+                         
+            <section class="section">
+                <img class="moto_section" src="<?= $result->getPhotoProd1() ?>" alt="moto1" />
+                <p class="dinosore"><?= $result->getNomProd3() ?></p>
+                <hr>
+                <p><?= $result->getDescProd1()?> </p>
+             </section>
+
+                         
+            <section class="section">
+                <img class="moto_section" src="<?= $result->getPhotoProd1() ?>" alt="moto1" />
+                <p class="dinosore"><?= $result->getNomProd4() ?></p>
+                <hr>
+                <p><?= $result->getDescProd1()?> </p>
+             </section>
+                
+
+
+
+
+                
+
+
+            
+            </article>
+
+
+
+            <p id="p">Pour nous connaitre plus en detail</p>
+                <hr class="hr"> 
+
+
+            <article class="dernier_a">
+                
+            <section class="section_fin">
+        <p id="p" ><?= $result->getMessagePerso() ?></p>
+                
+
+
+            </section>
+            <section class="section_fin">
+            <figure class="figure2">
+                <img class="img_fin" src="<?= $result->getImageFin() ?>" alt="moto2" />
+            </figure>
+            </section>
+            </article>
+
+
+
+
+            <footer>
+                <p>paragraphe</p>
+                <p>texte texte texte texte texte texte texte texte texte texte texte texte texte</p>
+                <p>texte texte texte texte texte texte texte texte texte texte texte texte texte</p>
+               
+                <p>2015-3WA-Exercice 7:Red Wolf</p>
+
+            </footer>
+
+
+    </div>
+
+
+
+</div>
+
+<a href="espace?action=supprimer&id=<?= $result->getId() ?>">supprimer</a>
+
+<a href="modifier?id=<?= $result->getId() ?>">modifier</a>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="public/js/owl.carousel.min.js"></script>
+		<script>$(document).ready(function(){
+		var options=
+		{
+			"items":1,
+			"dots":true,
+			"loop":true,
+		}
+  	$(".owl-carousel").owlCarousel(options);});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
