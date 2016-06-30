@@ -1,0 +1,368 @@
+<?php
+class Template {
+
+
+private $id;
+private $image1;
+private $image2;
+private $image3;
+
+private $annonce;
+private $photo_prod_1;
+private $photo_prod_2;
+private $photo_prod_3;
+private $photo_prod_4;
+
+private $nom_prod_1;
+private $nom_prod_2;
+private $nom_prod_3;
+private $nom_prod_4;
+
+private $desc_prod_1;
+private $desc_prod_2;
+private $desc_prod_3;
+private $desc_prod_4;
+
+private $message_perso;
+private $image_fin;
+private $id_login;
+private $author;
+
+private $link;
+
+
+
+
+
+
+public function __construct($link){
+
+	$this->link = $link ;
+
+}
+
+public function getId(){
+
+	return $this->id;
+}
+
+public function getImage1(){
+
+	return $this->image1;
+}
+
+public function getImage2(){
+
+	return $this->image2;
+}
+
+public function getImage3(){
+
+	return $this->image3;
+}
+
+
+public function getAnnonce(){
+
+	return $this->annonce;
+}
+
+
+public function getPhotoProd1(){
+
+	return $this->photo_prod_1;
+}
+
+
+public function getPhotoProd2(){
+
+	return $this->photo_prod_2;
+}
+
+public function getPhotoProd3(){
+
+	return $this->photo_prod_3;
+}
+
+
+public function getPhotoProd4(){
+
+	return $this->photo_prod_4;
+}
+
+
+public function getNomProd1(){
+
+	return $this->nom_prod_1;
+}
+
+
+public function getNomProd2(){
+
+	return $this->nom_prod_2;
+}
+
+public function getNomProd3(){
+
+	return $this->nom_prod_3;
+}
+
+
+public function getNomProd4(){
+
+	return $this->nom_prod_4;
+}
+
+
+public function getDescProd1(){
+
+	return $this->desc_prod_1;
+}
+
+
+public function getDescProd2(){
+
+	return $this->desc_prod_2;
+}
+
+public function getDescProd3(){
+
+	return $this->desc_prod_3;
+}
+
+
+public function getDescProd4(){
+
+	return $this->desc_prod_4;
+}
+
+
+public function getMessagePerso(){
+
+	return $this->message_perso;
+}
+
+
+public function getImageFin(){
+
+	return $this->image_fin;
+}
+
+public function getIdLogin(){
+
+	return $this->id_login;
+}
+
+public function getAuthor()
+	{
+		if ($this->author === null)
+		{
+			$manager = new UserManager($this->link);
+			$this->author = $manager->getById($this->id_login);
+		}
+		return $this->author;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public function setImage1($image1)
+	{
+		if (filter_var($image1, FILTER_VALIDATE_URL) != false)
+		// if(preg_match('/http://[w-]+[w.-]+.[a-zA-Z]{2,6}/', $image1))
+		{
+		    $this->image1 = $image1;
+		}
+		else
+		{
+		    throw new Exception("ce n'est pas un lien valide 1");
+		}
+	}
+
+public function setImage2($image2)
+	{
+		if (filter_var($image2, FILTER_VALIDATE_URL) != false)
+		// if(preg_match('/http://[w-]+[w.-]+.[a-zA-Z]{2,6}/', $image1))
+		{
+		    $this->image2 = $image2;
+		}
+		else
+		{
+		    throw new Exception("ce n'est pas un lien valide 1");
+		}
+	}
+
+public function setImage3($image3)
+	{
+		if (filter_var($image3, FILTER_VALIDATE_URL) != false)
+		// if(preg_match('/http://[w-]+[w.-]+.[a-zA-Z]{2,6}/', $image1))
+		{
+		    $this->image3 = $image3;
+		}
+		else
+		{
+		    throw new Exception("ce n'est pas un lien valide 1");
+		}
+	}
+ 
+public function setAnnonce($annonce)
+	{
+		if(is_numeric($annonce))
+			throw new Exception("veuillez ecrire du texte");
+		$this->annonce = $annonce;
+	}
+
+public function setPhotoProd1($photo_prod_1)
+	{
+		if (filter_var($photo_prod_1, FILTER_VALIDATE_URL) != false)
+		// if(preg_match('/http://[w-]+[w.-]+.[a-zA-Z]{2,6}/', $image1))
+		{
+		    $this->photo_prod_1 = $photo_prod_1;
+		}
+		else
+		{
+		    throw new Exception("ce n'est pas un lien valide 1");
+		}
+    }
+public function setPhotoProd2($photo_prod_2)
+	{
+		if (filter_var($photo_prod_2, FILTER_VALIDATE_URL) != false)
+		// if(preg_match('/http://[w-]+[w.-]+.[a-zA-Z]{2,6}/', $image1))
+		{
+		    $this->photo_prod_2 = $photo_prod_2;
+		}
+		else
+		{
+		    throw new Exception("ce n'est pas un lien valide 1");
+		}
+	}
+
+public function setPhotoProd3($photo_prod_3)
+	{
+		if (filter_var($photo_prod_3, FILTER_VALIDATE_URL) != false)
+		// if(preg_match('/http://[w-]+[w.-]+.[a-zA-Z]{2,6}/', $image1))
+		{
+		    $this->photo_prod_3 = $photo_prod_3;
+		}
+		else
+		{
+		    throw new Exception("ce n'est pas un lien valide 1");
+		}
+	}
+
+public function setPhotoProd4($photo_prod_4)
+	{
+		if (filter_var($photo_prod_4, FILTER_VALIDATE_URL) != false)
+		// if(preg_match('/http://[w-]+[w.-]+.[a-zA-Z]{2,6}/', $image1))
+		{
+		    $this->photo_prod_4 = $photo_prod_4;
+		}
+		else
+		{
+		    throw new Exception("ce n'est pas un lien valide 1");
+		}
+	}
+
+public function setNomProd1($nom_prod_1)
+	{
+		if (is_numeric($nom_prod_1))
+			throw new Exception("veuillez ecrire du texte");
+		$this->nom_prod_1= $nom_prod_1;
+	}
+
+public function setNomProd2($nom_prod_2)
+	{
+		if (is_numeric($nom_prod_2))
+			throw new Exception("veuillez ecrire du texte");
+		$this->nom_prod_2 = $nom_prod_2;
+	}
+
+public function setNomProd3($nom_prod_3)
+	{
+		if (is_numeric($nom_prod_3))
+			throw new Exception("veuillez ecrire du texte");
+		$this->nom_prod_3 = $nom_prod_3;
+	}
+
+public function setNomProd4($nom_prod_4)
+	{
+		if (is_numeric($nom_prod_4))
+			throw new Exception("veuillez ecrire du texte");
+		$this->nom_prod_4 = $nom_prod_4;
+	}
+
+public function setDescProd1($desc_prod_1)
+	{
+		if (strlen($desc_prod_1) < 35)
+			throw new Exception("veuillez ecrire au moin 35 carracteres");
+		$this->desc_prod_1 = $desc_prod_1;
+	}
+
+public function setDescProd2($desc_prod_2)
+	{
+		if (strlen($desc_prod_2) < 35)
+			throw new Exception("veuillez ecrire au moin 35 carracteres");
+		$this->desc_prod_2 = $desc_prod_2;
+	}
+
+public function setDescProd3($desc_prod_3)
+	{
+		if (strlen($desc_prod_3) < 35)
+			throw new Exception("veuillez ecrire au moin 35 carracteres");
+		$this->desc_prod_3 = $desc_prod_3;
+	}
+
+public function setDescProd4($desc_prod_4)
+	{
+		if (strlen($desc_prod_4) < 35)
+			throw new Exception("veuillez ecrire au moin 35 carracteres");
+		$this->desc_prod_4 = $desc_prod_4;
+	}
+
+public function setMessagePerso($message_perso)
+	{
+		if (strlen($message_perso) < 25)
+			throw new Exception("veuillez ecrire au moin 25 carracteres");
+		$this->message_perso = $message_perso;
+	}
+
+public function setImageFin($image_fin)
+	{
+		if (filter_var($image_fin, FILTER_VALIDATE_URL) != false)
+		// if(preg_match('/http://[w-]+[w.-]+.[a-zA-Z]{2,6}/', $image1))
+		{
+		    $this->image_fin = $image_fin;
+		}
+		else
+		{
+		    throw new Exception("ce n'est pas un lien valide 1");
+		}
+	}
+
+
+public function setIdLogin($id_login)
+	{
+		
+		$this->id_login = $id_login;
+	}
+ 
+ 
+ 
+ 
+ 
+ 
+
+}
+
+?>
